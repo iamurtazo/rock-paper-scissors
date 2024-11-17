@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.choice {
+    width: 30%;
+}
+
+.choice img {
+    width: 200px;
+    height: 200px;
+}
+
+.choice h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.submit_button {
+    background: rgb(0, 170, 255);
+    color: white; /* Set text color to white */
+    /* padding: 10px 20px; Optional: Add padding for better button size */
+    border: none;;
+    
+
+}
+.space {
+    width: 20cm; /* 10 cm converted to cm for spacing */
+}

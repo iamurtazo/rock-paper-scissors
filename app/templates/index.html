@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to</h1>
+    <h1>Rock Paper Scissors Game</h1>
+
+    <!-- Form with dropdown to get user input -->
+    <form method="POST">
+        <label for="move">Select your choice:</label>
+        <select id="move" name="move" required>
+            <option value="rock">Rock</option>
+            <option value="paper">Paper</option>
+            <option value="scissors">Scissors</option>
+        </select>
+        <button type="submit" class="submit_button">Submit</button>
+    </form>
+
+    <!-- Display the result if available -->
+    {% if chosen_move %}
+        <div class="container">
+            <!-- Left side: User's choice -->
+            <div class="choice">
+                <h3>Your Choice</h3>
+                <img src="{{ url_for('static', filename=chosen_move + '.png') }}" alt="{{ chosen_move }}">
+            </div>
+
+            <!-- Space between user and computer choices -->
+            <div class="space"></div>
+
+            <!-- Right side: Computer's choice -->
+            <div class="choice">
+                <h3>Computer's Choice</h3>
+                <img src="{{ url_for('static', filename=computer_move + '.png') }}" alt="{{ computer_move }}">
+            </div>
+        </div>
+
+        <!-- Display the result below the choices -->
+        <div class="result">
+            <h2>Result: {{ result }}</h2>
+        </div>
+    {% endif %}
+</body>
+</html>
